@@ -1,31 +1,32 @@
-# CineGroup
+# 🎬 CineGroup
 
-Site estático de divulgação para um cinema, desenvolvido em HTML e CSS puros (sem frameworks ou build tools).
+Landing page estática de divulgação para um cinema — banner, trailer em destaque e cartaz de filmes em exibição. Construída com HTML e CSS puros, sem frameworks ou build tools.
 
-## Páginas
+## ✨ Funcionalidades
 
-- **`index.html`** — Página inicial: banner, trailer em vídeo e sinopse, com botão de redirecionamento para compra de ingressos.
-- **`cadastro.html`** — Formulário de contato/cadastro (nome e e-mail).
-- **`criadores.html`** — Página com os cartões dos criadores/desenvolvedores do projeto.
+- Banner de destaque com chamada principal
+- Trailer em vídeo com sinopse e botão de compra de ingressos
+- Cartaz de filmes em exibição
+- Layout responsivo (desktop e mobile)
 
-## Estrutura
+## 🛠️ Tecnologias
+
+- HTML5
+- CSS3 (Flexbox, Grid, media queries)
+- Google Fonts ([Kdam Thmor Pro](https://fonts.google.com/specimen/Kdam+Thmor+Pro))
+
+## 📁 Estrutura
 
 ```
 cinemaemc/
 ├── index.html
-├── cadastro.html
-├── criadores.html
 ├── styles.css
-├── cadastro.css
-├── criadores.css
-└── (imagens e vídeo usados nas páginas)
+└── (imagens e vídeo usados na página)
 ```
 
-Cada página tem sua própria folha de estilo correspondente (`styles.css`, `cadastro.css`, `criadores.css`).
+## ▶️ Como rodar
 
-## Como rodar
-
-Por ser um site 100% estático, basta abrir os arquivos `.html` diretamente no navegador, ou servir a pasta com um servidor local:
+Por ser um site 100% estático, basta abrir `index.html` diretamente no navegador, ou servir a pasta com um servidor local:
 
 ```bash
 python -m http.server 8080
@@ -33,6 +34,6 @@ python -m http.server 8080
 
 Depois acesse [http://localhost:8080/index.html](http://localhost:8080/index.html).
 
-## Desenvolvido por
+## 👤 Desenvolvido por
 
-CineGroup
+**Vítor Raimundo**

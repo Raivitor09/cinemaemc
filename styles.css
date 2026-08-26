@@ -2,40 +2,26 @@
 
 *{
     margin: 0;
-    padding:0;
-    background-color:black;
-    list-style:none;
-    text-decoration:none;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #0a0a0a;
 }
 
 header{
     height: 90px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-}
-
-nav{
-    width:60%;
-}
-
-ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-li{
-    list-style: none;
-    color: aliceblue;
-    cursor: pointer;
-    font-size: 18px;
-    transition: .5s;
-    font-family:"Kdam Thmor Pro", sans-serif;
-}
-
-li:hover{
-    color: #ff0000;
+    background-color: #0a0a0a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgba(0,0,0,.6);
 }
 
 #logo{
@@ -44,18 +30,40 @@ li:hover{
 }
 
 #banner{
-    background-image: url("./cinema.banner.jfif");
+    background-image: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.75) 100%), url("./cinema.banner.jfif");
     background-position: 50% 50%;
     background-size: cover;
     width: 100%;
     height: 500px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.banner-overlay{
+    padding: 0 10%;
+    margin-bottom: 60px;
+    max-width: 700px;
+}
+
+.banner-overlay h1{
+    color: #fff;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.banner-overlay p{
+    color: #d9d9d9;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 17px;
 }
 
 #trailer-container{
     width: 100%;
-    height:500px;
+    padding: 60px 0;
     display: flex;
     justify-content: center;
+    background-color: #0a0a0a;
 }
 
 .content{
@@ -63,26 +71,29 @@ li:hover{
     display: flex;
     align-items:center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .trailer{
     width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.5);
 }
 
 #sinopse{
     width: 50%;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
-    margin-left:30px;
-    font-size: 27px;
+    justify-content:center;
+    gap: 20px;
 }
 
 .description{
-    color:#fff;
+    color:#e6e6e6;
     font-size: 19px;
+    line-height: 1.6;
     font-family: "Kdam Thmor Pro", sans-serif;
-    width:70%;
+    width:90%;
 }
 
 .button{
@@ -91,81 +102,134 @@ li:hover{
     background-color:#ff0000;
     color:#fff;
     padding:8px 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition:.8s;
+    transition: background-color .3s, transform .2s;
     font-size:18px;
     display:flex;
     justify-content: center;
     align-items:center;
     font-weight: bold;
+    font-family: "Kdam Thmor Pro", sans-serif;
     border:none;
     outline:none;
-    margin-top:25px;
 }
 
 .button:hover{
     background-color: #fff;
     color:black;
+    transform: translateY(-2px);
 }
 
 .actor-cards-container{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    padding: 20px 0 60px;
+    background-color: #0a0a0a;
 }
 
 .cards-content{
     width: 90%;
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
+    row-gap: 30px;
     column-gap: 40px;
 }
 
 .card{
     width:100%;
-    height:600px;
+    height:420px;
     background-size:cover;
     background-position:50% 50%;
-    border-radius:5px;
+    border-radius:8px;
     cursor: pointer;
-    transition: 1s;
+    transition: transform .35s, box-shadow .35s;
     display:flex;
     flex-direction:column;
     justify-content: flex-end;
-    padding: 0 0 20px 10px;
+    padding: 0 0 20px 16px;
     color: #fff;
-    font-size: 17px;
+    font-size: 19px;
+    font-weight: bold;
     font-family: "Kdam Thmor Pro",sans-serif;
+    box-shadow: 0 4px 14px rgba(0,0,0,.4);
 }
 
 .card:hover{
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
 }
 
-
 .banner-1{
-    background-image: url("./Avatar.jfif");
+    background-image: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.85) 100%), url("./Avatar.jfif");
 }
 
 .banner-2{
-    background-image: url("./homemaranha.jfif");
+    background-image: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.85) 100%), url("./homemaranha.jfif");
 }
 
 .banner-3{
-    background-image: url("./vingadoresultimato.jfif");
+    background-image: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.85) 100%), url("./vingadoresultimato.jfif");
 }
 
+.dev-section{
+    width: 100%;
+    padding: 60px 0 70px;
+    display: flex;
+    justify-content: center;
+    background-color: #0a0a0a;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.dev-card{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.dev-photo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff0000;
+}
+
+.dev-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.dev-label{
+    color: #ff0000;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.dev-name{
+    color: #fff;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 24px;
+    margin: 4px 0;
+}
+
+.dev-role{
+    color: #aaa;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 15px;
+}
 
 footer{
     height: 300px;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: #0a0a0a;
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
 span{
@@ -173,50 +237,62 @@ span{
     font-family: "Kdam Thmor Pro", sans-serif;
 }
 
-/* AQUI, NO PC, VAI SER NONE, PORÉM QUANDO UTILIZARMOS A RESPONSIVIDADE(MEDIA QUERY) UTILIZAREMOS O DISPLAY
-BLOCK PARA ELE SER VISÍVEL EM TELA, NESSE CASO EM TELAS MENORES, COMO O MOBILE */
-.footer-navigation{ 
-    display: none;
-}
-
-.footer-list{
+#back-to-top{
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    align-items:center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .3s, transform .3s, background-color .3s, visibility .3s;
+    z-index: 20;
 }
 
-@media(max-width:2100px){
-    
-    #banner{
-        background-position: 40%;
-        height: 400px;
-    }
-
+#back-to-top.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
+
+#back-to-top:hover{
+    background-color: #fff;
+    color: #000;
+}
+
 
 @media(max-width:768px){
-    .footer-navigation{
-        display: block;
-    }
-
-    nav{
-        display: none;
-    }
-
     #banner{
         background-position: 40%;
+    }
+
+    .banner-overlay{
+        margin-bottom: 30px;
+        padding: 0 6%;
+    }
+
+    .banner-overlay h1{
+        font-size: 28px;
     }
 
     #trailer-container{
         width:100%;
-        height: 700px;
-        display: flex;
-        flex-direction: column ;
+        padding: 40px 0;
     }
 
     .content{
         width: 95%;
-        display: flex;
         flex-direction: column;
     }
 
@@ -224,11 +300,9 @@ BLOCK PARA ELE SER VISÍVEL EM TELA, NESSE CASO EM TELAS MENORES, COMO O MOBILE 
         width: 100%;
     }
 
-    .sinopse{
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    #sinopse{
+        width: 100%;
+        margin-top: 20px;
     }
 
     .description{
@@ -237,12 +311,16 @@ BLOCK PARA ELE SER VISÍVEL EM TELA, NESSE CASO EM TELAS MENORES, COMO O MOBILE 
 
     .button{
         width: 100%;
-        margin-top: 30px;
-    }  
+        margin-top: 10px;
+    }
 
     .cards-content{
         grid-template-columns:1fr;
-        margin-top: 80px;
+    }
+
+    .dev-card{
+        flex-direction: column;
+        text-align: center;
     }
 
 }
